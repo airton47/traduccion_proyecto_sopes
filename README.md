@@ -73,7 +73,17 @@ The purpose of the applications in this part is to send traffic to the **Google 
 
 The information to be sent by the three traffic generators is the following:
 
-> <img src = ''>
+
+```
+{
+	"name" : "Mary Miller", // name of the person who published a commentary
+	"commentary": "These competitions were awesome", // content of the commentary
+	"date" : "24/07/2021", // date when commentary was done
+	"hashtags" : ["Karate","Javeline","Archery","Judo"], // array with associated hashtags to commentary
+	"upvotes" : "100", // number of upvotes for the commentary
+	"downvotes" : "30" // number of downvotes for the commentary
+}
+```
 
 ### Google Load Balancer
 
