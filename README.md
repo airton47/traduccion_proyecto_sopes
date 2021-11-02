@@ -49,11 +49,11 @@ news, and information on RAM and virtual machines to be created in the cloud.
 
 > Areas:
 
-- Local Machine (Purple Rectangle)
-- API Replicas (Blue Rectangle)
-- Google Gloud Platafform (External skyblue square)
-  - Virtual Machines In The Cloud (Internal skyblue square)
-- Data Bases (Green Rectangle)
+- [Local Machine](#local-machine) (Purple Rectangle)
+- [API Replicas](#api-replicas) (Blue Rectangle)
+- Google Gloud Platform (External skyblue square)
+  - [Virtual Machines In The Cloud](#virtual-machines-on-the-cloud) (Internal skyblue square)
+- [Databases](#databases) (Green Rectangle)
 
 > <img src = ''>
 
