@@ -134,7 +134,7 @@ Create a web application using the React framework. It will show the different m
 
 The information must be displayed in its entirety. The views in which the information will be displayed are at the discretion of the student, however, it should be noted that the aesthetics and usability of the APP will be graded. To get an idea of how to display the information you can use http://twitter.com as a reference. 
 
-A continuación se presentan algunas referencias sobre cómo manejar las vistas:
+Below are some references on how to handle views:
 
 > News and messages view:
 
