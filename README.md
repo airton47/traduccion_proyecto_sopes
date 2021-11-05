@@ -1,22 +1,27 @@
 # PROYECT: OLYMPIC GAMES NEWS
 
 # INDEX
-* [Objetives](#objetives)
-  * [General Objetives](#general-objetives)
-  * [Specific Objetives](#specific-objetives)
-* [General Description](#general-description)
-* [General Diagram of The System](#general-diagram-of-the-system)
-* [System Flow Explanation](#system-flow-explanation)
-  * [Local Machine](#local-machine)
-  * [Google Load Balancer](#google-load-balancer)
-  * [API Replicas](#api-replicas)
-  * [Services on Google Cloud Platform](#services-on-google-cloud-platform)
-  * [Virtual Machines On The Cloud](#virtual-machines-on-the-cloud)
-  * [Google Pub Sub](#google-pub-sub)
-  * [App Engine](#app-engine)
-  * [Cloud Run - App](#cloud-run---app)
-  * [Databases](#databases)
-* [Reflection Questions](#reflection-questions)
+- [PROYECT: OLYMPIC GAMES NEWS](#proyect-olympic-games-news)
+- [INDEX](#index)
+  - [Objetives](#objetives)
+    - [General Objetives](#general-objetives)
+    - [Specific Objetives](#specific-objetives)
+  - [General Description](#general-description)
+  - [General Diagram of The System](#general-diagram-of-the-system)
+  - [System Flow Explanation](#system-flow-explanation)
+    - [Local Machine](#local-machine)
+    - [Google Load Balancer](#google-load-balancer)
+    - [API Replicas](#api-replicas)
+    - [Services on Google Cloud Platform](#services-on-google-cloud-platform)
+    - [Virtual Machines On The Cloud](#virtual-machines-on-the-cloud)
+    - [Google Pub Sub](#google-pub-sub)
+    - [App Engine](#app-engine)
+  - [Cloud Run - App](#cloud-run---app)
+  - [Databases](#databases)
+  - [Reflection Questions](#reflection-questions)
+  - [Overrides](#overrides)
+  - [Deliverables](#deliverables)
+    - [Github repository](#github-repository)
 
 ## Objetives
 
@@ -120,8 +125,93 @@ so that they send information from traffic generators. Also, a notification via 
 
 ### App Engine
 
-### Cloud Run - App
+## Cloud Run - App
+> APP WEB:
 
-### Databases
+Create a web application using the React framework. It will show the different metrics according to the data stored in the CosmosDB and CloudSQL server. The application of UX/UI and responsive concepts for the design of the app will be taken into account in the qualification. Finally, the APP made in React must be published using Google Cloud Run. 
+
+> Information view:
+
+The information must be displayed in its entirety. The views in which the information will be displayed are at the discretion of the student, however, it should be noted that the aesthetics and usability of the APP will be graded. To get an idea of how to display the information you can use http://twitter.com as a reference. 
+
+A continuación se presentan algunas referencias sobre cómo manejar las vistas:
+
+> News and messages view:
+
+<img src="./images/fr.png" align="center" style="margin-right: 15px;"/> <br clear="left"/><br/>
+
+> View of a news item:
+
+<img src="./images/tw.png" align="center" style="margin-right: 15px;"/> <br clear="left"/><br/>
+
+> Report view:
+
+Apart from the information displayed in the database, you are asked to make the following reports in tabular form, these reports must be in real time using Sockets.IO. 
+
+- Show the total number of news, upvotes and hashtags (different) in the system.
+- Table with the data in the system.
+- Pie chart of the top 5 hashtags. It will be calculated from the number of upvotes each hashtag has.
+- Graph (bar, line, stacketed, etc...) comparing the number of upvotes and downvotes per day.
+
+You should also add a button or filter with which you can decide from which database to run the reports (i.e. you should implement the reports in both databases). It is recommended to use the following 
+library: https://canvasjs.com/react-charts
+
+<img src="./images/tr.png" align="center" style="margin-right: 15px;"/> <br clear="left"/><br/>
+
+## Databases
+
+<img src="./images/db.png" align="center" style="margin-right: 15px;"/> <br clear="left"/><br/>
+
+One of the objectives of this project is the comparison between the CosmosDB database and the use of the CloudSQL service, making also a multi-cloud project. 
+
+A Cosmos DB database must be set up using Microsoft Azure and another database of your choice (mysql, postgresql, sql) using CloudSQL on Google Cloud Platform. 
+
+Both databases will contain the same information in each of them. The information will come to them through the replicated APIs described above, and will be consumed by the Rest API to be processed and then displayed in the React web application. How the data will be stored is at the student's discretion. 
 
 ## Reflection Questions
+
+The questions will constitute a high weighting of the total project score, and only answers that have a supporting implementation, i.e., the Prometheus and Grafana module must be completed to be eligible to answer the question for that module, will be scored. All questions must be submitted with their respective answer in the technical manual, and will be asked in the qualification. The questions to be answered are the following:
+
+- Which traffic generator is faster? What are the differences between the traffic generator implementations? 
+- Which programming language used for the APIs was the most optimal with respect to response time between requests? Which language had the least optimal performance?
+- Which of the Google Cloud Platform services was the best for implementing APIs? Which was the worst? Why?
+- Do you consider it better to use Containerd or Docker and why?
+- Which database had the lowest latency between responses and supported the highest load at any given time? Which of the two would you recommend for such a project?
+- Do you find it useful to use Prometheus and Grafana to create dashboards, why?
+
+## Overrides
+
+- The project will be carried out in groups of no more than 3 people.
+- A private GitHub or Gitlab repository should be created where all team members will collaborate. 
+- Commits will be reviewed and each member will be checked for contributions to the repository.
+- Only implementations with the above languages and restrictions will be considered.
+- An input file will be provided on the day of grading, however, a file with the same structure will be provided from the start so that they can test.
+- If copies are found, the student will receive a score of 0 points and will be reported to the school of science and systems.
+- Late deliveries will not be accepted.
+
+
+## Deliverables
+
+The mode of delivery will be through UEDI, just attach the link to your repository, the delivery will be per group so only one person must deliver, the space will be available in days close to the delivery date. Only groups that expect to finish on the stipulated date should submit.
+
+### Github repository
+
+In addition to adding each assistant, the repository must contain the following files: (In the folder organization that best suits the student).
+
+- Dockerfiles
+- Docker-compose files
+- React source code
+-  Locust file
+- Python Traffic Generator
+- Go Traffic Generator
+- Python API Code
+- Rust API Code
+- Go API Code
+- Code used with Google Pub Sub
+- JavaScript code used for the NodeJS API
+- RAM module C code
+- C code for the Process module
+- Any other necessary configuration files
+- Entity-relationship models or database object models
+- Technical manual, with answers to the reflection questions.
+- User manual
