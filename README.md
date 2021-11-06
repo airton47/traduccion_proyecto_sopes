@@ -60,7 +60,7 @@ news, and information on RAM and virtual machines to be created in the cloud.
   - [Virtual Machines In The Cloud](#virtual-machines-on-the-cloud) (Internal skyblue square)
 - [Databases](#databases) (Green Rectangle)
 
-> <img src = ''>
+> <img src = 'images/schema.png'>
 
 ## System Flow Explanation
 
@@ -134,7 +134,7 @@ Create a web application using the React framework. It will show the different m
 
 The information must be displayed in its entirety. The views in which the information will be displayed are at the discretion of the student, however, it should be noted that the aesthetics and usability of the APP will be graded. To get an idea of how to display the information you can use http://twitter.com as a reference. 
 
-Below are some references on how to handle views:
+Below, there are some references about how to handle views:
 
 > News and messages view:
 
